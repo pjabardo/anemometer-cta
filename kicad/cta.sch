@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:cta-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -146,7 +147,7 @@ Wire Wire Line
 Wire Wire Line
 	5500 2400 5200 2400
 Wire Wire Line
-	5200 2400 5200 1850
+	5200 2400 5200 2300
 Wire Wire Line
 	2750 2050 2750 2500
 Connection ~ 2750 2500
@@ -201,17 +202,6 @@ Wire Wire Line
 Connection ~ 3300 2900
 Wire Wire Line
 	3300 2900 3600 2900
-$Comp
-L Device:R_US Rs1
-U 1 1 5F6C5636
-P 3600 2400
-F 0 "Rs1" V 3395 2400 50  0000 C CNN
-F 1 "220k" V 3486 2400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3640 2390 50  0001 C CNN
-F 3 "~" H 3600 2400 50  0001 C CNN
-	1    3600 2400
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	5500 1650 5500 1600
 Connection ~ 5500 1600
@@ -433,11 +423,6 @@ F 3 "~" H 4700 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3600 2850 3600 2550
-Connection ~ 3600 2850
-Wire Wire Line
-	3600 2250 3600 1950
-Wire Wire Line
 	5000 1100 5050 1100
 Wire Wire Line
 	3900 1750 4050 1750
@@ -509,4 +494,11 @@ F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 5500 1850 50  000
 	1    5500 1850
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3600 1950 3600 2300
+Wire Wire Line
+	3600 2300 5200 2300
+Connection ~ 5200 2300
+Wire Wire Line
+	5200 2300 5200 1850
 $EndSCHEMATC
