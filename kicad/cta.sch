@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:cta-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -31,7 +30,7 @@ U 1 1 5F6A1243
 P 3000 2650
 F 0 "R2" H 3068 2696 50  0000 L CNN
 F 1 "15" H 3068 2605 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3040 2640 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_Power_L20.0mm_W6.4mm_P22.40mm" V 3040 2640 50  0001 C CNN
 F 3 "~" H 3000 2650 50  0001 C CNN
 	1    3000 2650
 	1    0    0    -1  
@@ -96,7 +95,7 @@ L Device:R_US Rtrans1
 U 1 1 5F6A81EC
 P 5500 2550
 F 0 "Rtrans1" H 5568 2596 50  0000 L CNN
-F 1 "1k" H 5568 2505 50  0000 L CNN
+F 1 "2k" H 5568 2505 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5540 2540 50  0001 C CNN
 F 3 "~" H 5500 2550 50  0001 C CNN
 	1    5500 2550
@@ -146,8 +145,6 @@ Wire Wire Line
 	5500 3000 5500 2700
 Wire Wire Line
 	5500 2400 5200 2400
-Wire Wire Line
-	5200 2400 5200 2300
 Wire Wire Line
 	2750 2050 2750 2500
 Connection ~ 2750 2500
@@ -373,7 +370,7 @@ U 1 1 5F7697C4
 P 3700 1750
 F 0 "Q2" H 3891 1704 50  0000 L CNN
 F 1 "2N3906" H 3891 1795 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3900 1675 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3900 1675 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3906.pdf" H 3700 1750 50  0001 L CNN
 	1    3700 1750
 	-1   0    0    1   
@@ -458,17 +455,6 @@ Wire Wire Line
 	3600 750  5050 750 
 Wire Wire Line
 	5050 750  5050 1100
-$Comp
-L Device:C C1
-U 1 1 5F7D8DC5
-P 5000 3250
-F 0 "C1" V 4748 3250 50  0000 C CNN
-F 1 "C" V 4839 3250 50  0000 C CNN
-F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 5038 3100 50  0001 C CNN
-F 3 "~" H 5000 3250 50  0001 C CNN
-	1    5000 3250
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5150 3250 5400 3250
 Wire Wire Line
@@ -489,16 +475,42 @@ U 1 1 5F7F4BD5
 P 5500 1850
 F 0 "Q1" H 5690 1896 50  0000 L CNN
 F 1 "2N3904" H 5690 1805 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5700 1775 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 5700 1775 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 5500 1850 50  0001 L CNN
 	1    5500 1850
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C C1
+U 1 1 5F7D8DC5
+P 5000 3250
+F 0 "C1" V 4748 3250 50  0000 C CNN
+F 1 "C" V 4839 3250 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 5038 3100 50  0001 C CNN
+F 3 "~" H 5000 3250 50  0001 C CNN
+	1    5000 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 1850 5200 2300
+$Comp
+L Device:R_US Ron1
+U 1 1 5F9763D1
+P 4250 2300
+F 0 "Ron1" V 4045 2300 50  0000 C CNN
+F 1 "2k" V 4136 2300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4290 2290 50  0001 C CNN
+F 3 "~" H 4250 2300 50  0001 C CNN
+	1    4250 2300
+	0    1    1    0   
+$EndComp
 Wire Wire Line
 	3600 1950 3600 2300
 Wire Wire Line
-	3600 2300 5200 2300
+	3600 2300 4100 2300
+Wire Wire Line
+	4400 2300 5200 2300
 Connection ~ 5200 2300
 Wire Wire Line
-	5200 2300 5200 1850
+	5200 2300 5200 2400
 $EndSCHEMATC
