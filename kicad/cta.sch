@@ -150,17 +150,6 @@ Wire Wire Line
 Connection ~ 2750 2500
 Wire Wire Line
 	2750 2500 3000 2500
-$Comp
-L Connector:Conn_01x02_Male VALIM1
-U 1 1 5F6BC983
-P 5600 1300
-F 0 "VALIM1" V 5662 1344 50  0000 L CNN
-F 1 "Vcc" V 5753 1344 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 5600 1300 50  0001 C CNN
-F 3 "~" H 5600 1300 50  0001 C CNN
-	1    5600 1300
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2750 3300 2750 4050
 Wire Wire Line
@@ -254,7 +243,6 @@ F 3 "" H 5500 1100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5500 1500 5300 1500
-Connection ~ 5500 1500
 Wire Wire Line
 	6150 4300 5300 4300
 Wire Wire Line
@@ -295,30 +283,14 @@ Wire Wire Line
 Connection ~ 5400 3600
 Wire Wire Line
 	5400 3600 6150 3600
-$Comp
-L Connector:Conn_01x02_Male VOUT1
-U 1 1 5F6FF1B4
-P 7700 4050
-F 0 "VOUT1" H 7672 3932 50  0000 R CNN
-F 1 "VOUT" H 7672 4023 50  0000 R CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 7700 4050 50  0001 C CNN
-F 3 "~" H 7700 4050 50  0001 C CNN
-	1    7700 4050
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	7200 3950 7500 3950
 Connection ~ 7200 3950
-Wire Wire Line
-	7500 4050 7500 4300
-Wire Wire Line
-	7500 4300 6150 4300
-Connection ~ 6150 4300
 Connection ~ 6000 3200
 Wire Wire Line
 	6000 3200 6000 4050
 Wire Wire Line
-	5500 1100 5300 1100
+	5500 1100 5450 1100
 Wire Wire Line
 	5300 1100 5300 1500
 Connection ~ 6000 1500
@@ -348,9 +320,7 @@ F 3 "" H 5850 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5850 1150 6000 1150
-Wire Wire Line
-	6000 1150 6000 1500
+	6000 1150 6000 1250
 Wire Wire Line
 	6300 2600 6300 1100
 Wire Wire Line
@@ -513,4 +483,35 @@ Wire Wire Line
 Connection ~ 5200 2300
 Wire Wire Line
 	5200 2300 5200 2400
+$Comp
+L Connector_Generic:Conn_01x03 VALIM1
+U 1 1 5F6BC983
+P 5550 1350
+F 0 "VALIM1" V 5612 1394 50  0000 L CNN
+F 1 "Vcc" V 5703 1394 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-3_P5.08mm" H 5550 1350 50  0001 C CNN
+F 3 "~" H 5550 1350 50  0001 C CNN
+	1    5550 1350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 1150 5450 1100
+Connection ~ 5450 1100
+Wire Wire Line
+	5450 1100 5300 1100
+Wire Wire Line
+	5550 1150 5550 1250
+Wire Wire Line
+	5550 1250 6000 1250
+Connection ~ 6000 1250
+Wire Wire Line
+	6000 1250 6000 1500
+Wire Wire Line
+	5850 1150 6000 1150
+Wire Wire Line
+	7500 3950 7500 800 
+Wire Wire Line
+	7500 800  5650 800 
+Wire Wire Line
+	5650 800  5650 1150
 $EndSCHEMATC
