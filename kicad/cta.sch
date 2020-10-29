@@ -440,11 +440,11 @@ Connection ~ 4550 3150
 Wire Wire Line
 	4550 3150 4750 3150
 $Comp
-L Transistor_BJT:2N3904 Q1
+L Transistor_BJT:BC517 Q1
 U 1 1 5F7F4BD5
 P 5500 1850
 F 0 "Q1" H 5690 1896 50  0000 L CNN
-F 1 "2N3904" H 5690 1805 50  0000 L CNN
+F 1 "BC517" H 5690 1805 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 5700 1775 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 5500 1850 50  0001 L CNN
 	1    5500 1850
