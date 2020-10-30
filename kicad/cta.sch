@@ -420,8 +420,6 @@ Connection ~ 5800 1500
 Wire Wire Line
 	5800 1500 5600 1500
 Wire Wire Line
-	3600 1550 3600 750 
-Wire Wire Line
 	3600 750  5050 750 
 Wire Wire Line
 	5050 750  5050 1100
@@ -468,7 +466,7 @@ L Device:R_US Ron1
 U 1 1 5F9763D1
 P 4250 2300
 F 0 "Ron1" V 4045 2300 50  0000 C CNN
-F 1 "10" V 4136 2300 50  0000 C CNN
+F 1 "47k" V 4136 2300 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4290 2290 50  0001 C CNN
 F 3 "~" H 4250 2300 50  0001 C CNN
 	1    4250 2300
@@ -514,4 +512,19 @@ Wire Wire Line
 	7500 800  5650 800 
 Wire Wire Line
 	5650 800  5650 1150
+$Comp
+L Diode:1N4148 D1
+U 1 1 5F9D38B7
+P 3600 1200
+F 0 "D1" V 3646 1120 50  0000 R CNN
+F 1 "1N4148" V 3555 1120 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3600 1025 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3600 1200 50  0001 C CNN
+	1    3600 1200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3600 1050 3600 750 
+Wire Wire Line
+	3600 1550 3600 1350
 $EndSCHEMATC
