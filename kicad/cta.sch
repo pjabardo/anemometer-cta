@@ -132,7 +132,7 @@ U 1 1 5F6C2231
 P 5050 3000
 F 0 "U1" H 5050 3367 50  0000 C CNN
 F 1 "LM324" H 5050 3276 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 5000 3100 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 5000 3100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 5100 3200 50  0001 C CNN
 	1    5050 3000
 	1    0    0    -1  
@@ -143,7 +143,7 @@ U 2 1 5F6C42EC
 P 5050 3600
 F 0 "U1" H 5050 3967 50  0000 C CNN
 F 1 "LM324" H 5050 3876 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 5000 3700 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 5000 3700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 5100 3800 50  0001 C CNN
 	2    5050 3600
 	1    0    0    -1  
@@ -187,7 +187,7 @@ U 3 1 5F6D3FD4
 P 6900 3950
 F 0 "U1" H 6900 4317 50  0000 C CNN
 F 1 "LM324" H 6900 4226 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 6850 4050 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 6850 4050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 6950 4150 50  0001 C CNN
 	3    6900 3950
 	1    0    0    -1  
@@ -211,7 +211,7 @@ U 5 1 5F6E08C9
 P 3750 4400
 F 0 "U1" H 3708 4446 50  0000 L CNN
 F 1 "LM324" H 3708 4355 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 3700 4500 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3700 4500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3800 4600 50  0001 C CNN
 	5    3750 4400
 	1    0    0    -1  
@@ -444,7 +444,7 @@ Wire Wire Line
 	5500 2150 4200 2150
 Wire Wire Line
 	5500 2150 5500 3000
-Text Label 7500 3950 0    50   ~ 0
+Text Label 9100 4050 0    50   ~ 0
 VOUTPUT
 Text Label 2450 1150 0    50   ~ 0
 VOUTPUT
@@ -573,4 +573,64 @@ Text Notes 4750 950  0    79   ~ 0
 Circuit for turning on the Q1 transistor
 Text Notes 5400 4750 0    79   ~ 0
 Output voltage divider and follower\n
+$Comp
+L Amplifier_Operational:LM324 U1
+U 4 1 5FA2AA8D
+P 8500 4050
+F 0 "U1" H 8500 4417 50  0000 C CNN
+F 1 "LM324" H 8500 4326 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 8450 4150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 8550 4250 50  0001 C CNN
+	4    8500 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US Rf2
+U 1 1 5FA2D98F
+P 7650 3950
+F 0 "Rf2" H 7718 3996 50  0000 L CNN
+F 1 "10k" H 7718 3905 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7690 3940 50  0001 C CNN
+F 3 "~" H 7650 3950 50  0001 C CNN
+	1    7650 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7800 3950 7900 3950
+$Comp
+L Device:CP Cf2
+U 1 1 5FA3187E
+P 7900 4100
+F 0 "Cf2" H 8018 4146 50  0000 L CNN
+F 1 "10u" H 8018 4055 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 7938 3950 50  0001 C CNN
+F 3 "~" H 7900 4100 50  0001 C CNN
+	1    7900 4100
+	1    0    0    -1  
+$EndComp
+Connection ~ 7900 3950
+Wire Wire Line
+	7900 3950 8200 3950
+$Comp
+L power:GND #PWR0113
+U 1 1 5FA340D0
+P 7900 4250
+F 0 "#PWR0113" H 7900 4000 50  0001 C CNN
+F 1 "GND" H 7905 4077 50  0000 C CNN
+F 2 "" H 7900 4250 50  0001 C CNN
+F 3 "" H 7900 4250 50  0001 C CNN
+	1    7900 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 4050 8950 4050
+Wire Wire Line
+	8950 4050 8950 4300
+Wire Wire Line
+	8950 4300 8200 4300
+Wire Wire Line
+	8200 4300 8200 4150
+Connection ~ 8950 4050
+Wire Wire Line
+	8950 4050 9100 4050
 $EndSCHEMATC
